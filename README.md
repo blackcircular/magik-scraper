@@ -1,12 +1,12 @@
 ## magik-scraper
-ดึงข้อมูลของกองทุนรวมมาเก็บไว้ในไฟล์ CSV (ข้อมูลอัพเดทล่าสุดตามเว็บไซต์ WealthMagik)
+Scrap & Save lastes updated fund performance to csv
 
 ## Features
-* NAV ล่าสุด
-* ค่าการเปลี่ยนแปลงของ NAV
-* ราคารับซื้อคืน
-* ราคาขาย
-* ข้อมูล ณ วันที่
+* Currently NAV
+* NAV Change
+* Bid
+* Offer
+* Datetime
 
 ## Requirement
 * Python 3.6+
@@ -14,11 +14,13 @@
 * Beautiful Soup 4.7.1
 
 ## Download
-Clone หรือ Download as zip
+Clone or Download as zip
 
 ## Quickstart
 ```python
+import magik
+
 # url from Fund Performance not a Fund Profile!
 url = 'https://www.wealthmagik.com/FundInfo/FundPerformance-TMBAM-MIXBAL-TMBAALF-กองทุนเปิดทหารไทยจัดทัพลงทุน%20ระยะยาว'
 filename = 'TMBAALF'
-main(url, filename)
+magik.scrape(url, filename)
