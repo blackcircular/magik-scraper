@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def main(filename, url):
+def scrape(filename, url):
     html = load_html(url)
     result = get_data(html)
     write_csv = to_csv(filename, result)
